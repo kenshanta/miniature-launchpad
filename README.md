@@ -26,6 +26,7 @@ Dive into a world of efficiency with these pre-configured goodies:
 ### 🌐 Apps and Packages Galore!
 
 - `app`: a sleek [Next.js](https://nextjs.org/) app for your web app.
+- `contacts-dashboard-app`: a sleek [React](https://react.dev/) contact management app that uses browser's storage to save data.
 - `ui`: a shared React component library powering all the apps.
 - `tailwind-config`: a shared [Tailwind CSS](https://tailwindcss.com/) configuration for consistent styling across
   apps and libraries.
@@ -88,3 +89,11 @@ Fuel your knowledge about Turborepo with these resources:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## 📝 TO-DO:
+
+- Add `bootstrap-config` styling?
+
+## Contributions:
+
+- [Kenshanta](https://github.com/kenshanta)
