@@ -27,6 +27,7 @@ Dive into a world of efficiency with these pre-configured goodies:
 
 - `app`: a sleek [Next.js](https://nextjs.org/) app for your web app.
 - `contacts-dashboard-app`: a sleek [React](https://react.dev/) contact management app that uses browser's storage to save data.
+- `dynamic-graph`: a modern and responsive [React](https://react.dev/) data visualizer via a graph; that uses browser's storage to save the user's search history and sharable results via links.
 - `ui`: a shared React component library powering all the apps.
 - `tailwind-config`: a shared [Tailwind CSS](https://tailwindcss.com/) configuration for consistent styling across
   apps and libraries.
