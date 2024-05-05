@@ -12,7 +12,7 @@
     "ip": "^2.0.1",
     "postcss": "8.4.38",
     "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
+    "tsconfig": "*",
     "turbo": "latest"
   },
   "workspaces": [
