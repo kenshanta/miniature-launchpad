@@ -13,11 +13,58 @@ your development process!
 
 ## 🌟 Getting Started is a Breeze!
 
-Ready to hit the ground running? Fire up your terminal and let's get those engines revving:
+### Ready to hit the ground running? Fire up your terminal and let's get those engines revving 💥
 
 ```sh
 npx create-turbo@latest
 ```
+#### When prompted about which directory to select for creating the turbo app; follow through with the default suggestion (root directory):
+```sh
+>>> Welcome to Turborepo! Let us get you set up with a new codebase.
+
+? Where would you like to create your turborepo? (./my-turborepo) <== 
+```
+#### Select _pnpm workspaces_ as your default package manager:
+
+```sh
+ Which package manager do you want to use? 
+  npm workspaces 
+❯ pnpm workspaces 
+  yarn workspaces 
+  - bun workspaces (beta) (not installed)
+```
+
+_(assuming all the preceeding documented steps were followed through successfully)_ <br/>
+#### Finally your terminal logs should look like so: 
+
+```sh
+Installing packages. This might take a couple of minutes.
+
+>>> Success! Created a new Turborepo at "my-turborepo".
+Inside that directory, you can run several commands:
+
+  pnpm run build
+     Build all apps and packages
+
+  pnpm run dev
+     Develop all apps and packages
+
+  pnpm run lint
+     Lint all apps and packages
+
+Turborepo will cache locally by default. For an additional
+speed boost, enable Remote Caching with Vercel by
+entering the following command:
+
+  pnpm dlx turbo login
+
+We suggest that you begin by typing:
+
+  cd my-turborepo
+  pnpm dlx turbo login
+
+```
+ **It is _not_ required to follow up with the preceeding log**
 
 ## 📦 What’s in the Box?
 
