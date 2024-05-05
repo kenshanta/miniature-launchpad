@@ -4,7 +4,7 @@ import { Contact } from "../../interfaces/interfaces";
 const useContacts = (): [
   Contact[],
   (contacts: Contact[]) => void,
-  (contacts: Contact[]) => void
+  (contacts: Contact[]) => void,
 ] => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   useEffect(() => {
@@ -31,9 +31,7 @@ const useContacts = (): [
   };
 
   const createContacts = (newContacts: Contact[]) => {
-    setContacts((prev) => {
-      [...prev, newContacts];
-    });
+    setContacts((prev) => [...prev, ...newContacts]);
     localStorage.setItem("contacts", JSON.stringify(newContacts));
   };
 

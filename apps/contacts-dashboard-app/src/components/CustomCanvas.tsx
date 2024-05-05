@@ -31,7 +31,7 @@ const EditCanvasPanel: React.FC<EditCanvasPanelProps> = ({
   const handleChange = (e: React.ChangeEvent<HTMLFormElement>) => {
     const { id, value } = e.target;
     setIsSubmitDisabled(false);
-    setFormData((prevData) => ({
+    setFormData(() => ({
       ...contactDetails,
       [id]: value,
       id: contactDetails.id,

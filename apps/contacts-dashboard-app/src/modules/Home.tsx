@@ -23,8 +23,8 @@ const HomeModule: React.FC = () => {
   };
 
   const [selectedContactDetails, setSelectedContactDetails] = useState({
-    id: JSON.parse(localStorage?.getItem("contacts"))
-      ? JSON.parse(localStorage?.getItem("contacts")).length
+    id: JSON.parse(localStorage.getItem("contacts")!)
+      ? JSON.parse(localStorage.getItem("contacts")!).length
       : 0,
     firstName: "",
     lastName: "",

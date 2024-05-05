@@ -1,18 +1,18 @@
 import React from "react";
-import { Box, Button, Slider, NativeSelect, InputLabel } from "@mui/material";
-import { useForm, Controller } from "react-hook-form";
-import { useParams } from "react-router-dom";
-import { getYearlyQuarters, createQuarterToNumberMap } from "../utils/helpers";
+import { Box, Button, NativeSelect, InputLabel } from "@mui/material";
+import { useForm } from "react-hook-form";
+// import { useParams } from "react-router-dom";
+// import { getYearlyQuarters, createQuarterToNumberMap } from "../utils/helpers";
 import { toast } from "react-toastify";
 
-const quarterToNumberMap = createQuarterToNumberMap(getYearlyQuarters());
-const marks = getYearlyQuarters().map((quarter) => ({
-  value: quarterToNumberMap[quarter],
-  label: quarter,
-}));
-function valueLabelFormat(value: number) {
-  return marks.find((mark) => mark.value === value)?.label;
-}
+// const quarterToNumberMap = createQuarterToNumberMap(getYearlyQuarters());
+// const marks = getYearlyQuarters().map((quarter) => ({
+//   value: quarterToNumberMap[quarter],
+//   label: quarter,
+// }));
+// function valueLabelFormat(value: number) {
+//   return marks.find((mark) => mark.value === value)?.label;
+// }
 
 interface SearchFormProps {
   handleRegistration: (data: {
@@ -26,18 +26,20 @@ interface FormDataProps {
 }
 const SearchForm: React.FC<SearchFormProps> = ({ handleRegistration }) => {
   const {
-    control,
+    // control,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormDataProps>();
-  const { houseNumber = "", from = "3", to = "7" } = useParams();
+  // const { houseNumber = "", from = "3", to = "7" } = useParams();
 
   React.useEffect(() => {
     if (errors.apartmentType) {
       toast("Select a housing type", { type: "warning" });
     }
   }, [errors]);
+  // const ModalSafeForReact18 = Controller as ComponentType<ControllerProps>;
+
   return (
     <Box>
       <form className="form" onSubmit={handleSubmit(handleRegistration)}>
@@ -45,7 +47,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ handleRegistration }) => {
         <Box paddingBottom={5}>
           <NativeSelect
             size="small"
-            defaultValue={houseNumber}
+            // defaultValue={houseNumber}
             {...register("apartmentType", { required: true })}
             variant="outlined"
             color="error"
@@ -59,8 +61,8 @@ const SearchForm: React.FC<SearchFormProps> = ({ handleRegistration }) => {
           </NativeSelect>
         </Box>
         <InputLabel>Quarterly range</InputLabel>
-        <Box>
-          <Controller
+        {/* <Box>
+          <ModalSafeForReact18
             name="quarterly"
             control={control}
             defaultValue={[parseInt(from), parseInt(to)]}
@@ -77,7 +79,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ handleRegistration }) => {
               />
             )}
           />
-        </Box>
+        </Box> */}
         <Box display={"flex"} justifyContent={"center"} flexDirection={"row"}>
           <Button size="large" variant="contained" type="submit">
             Submit
