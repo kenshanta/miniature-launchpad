@@ -15,6 +15,10 @@
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "packageManager": "pnpm@8.9.0",
   "dependencies": {
     "@babel/traverse": "^7.24.5"
