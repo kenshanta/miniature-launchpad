@@ -8,16 +8,16 @@ const useContacts = (): [
 ] => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   useEffect(() => {
-    const storedContacts = localStorage.getItem("contacts");
+    const storedContacts = sessionStorage.getItem("contacts");
     if (storedContacts) {
       try {
         setContacts(JSON.parse(storedContacts));
       } catch (error) {
-        console.error("Error parsing contacts from localStorage:", error);
+        console.error("Error parsing contacts from sessionStorage:", error);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [localStorage.getItem("contacts")]);
+  }, [sessionStorage.getItem("contacts")]);
 
   const updateContacts = (updatedContacts: Contact[]) => {
     setContacts((prevContacts) => {
@@ -27,12 +27,12 @@ const useContacts = (): [
       });
       return updatedList;
     });
-    localStorage.setItem("contacts", JSON.stringify(updatedContacts));
+    sessionStorage.setItem("contacts", JSON.stringify(updatedContacts));
   };
 
   const createContacts = (newContacts: Contact[]) => {
     setContacts((prev) => [...prev, ...newContacts]);
-    localStorage.setItem("contacts", JSON.stringify(newContacts));
+    sessionStorage.setItem("contacts", JSON.stringify(newContacts));
   };
 
   return [contacts, createContacts, updateContacts];
