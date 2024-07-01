@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>URL Shortener</h1>
+
+      <form action="/shorten" method="post">
+        <label for="fullUrl">Enter URL:</label>
+        <input type="url" name="fullUrl" id="fullUrl" required />
+        <button type="submit">Shorten</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Full URL</th>
+            <th>Short URL</th>
+            <th># of Clicks</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (urls) { %> <% urls.forEach(url => { %>
+          <tr>
+            <td>
+              <a href="<%= url.full_url %>" target="_blank"
+                ><%= url.full_url %></a
+              >
+            </td>
+
+            <td>
+              <a href="<%= url.full_url %>" target="_blank"
+                ><%= url.short_url %></a
+              >
+            </td>
+            <td><%= url.clicks %></td>
+            <td>
+              <form method="post" action="/delete">
+                <button
+                  name="shortUrl"
+                  id="shortUrl"
+                  type="submit"
+                  value="<%= url.short_url %>"
+                >
+                  Delete
+                </button>
+              </form>
+            </td>
+          </tr>
+          <% }); %> <% } else { %>
+          <tr>
+            <td colspan="3">No URLs found.</td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
