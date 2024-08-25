@@ -19,10 +19,6 @@ Ready to hit the ground running? Fire up your terminal and let's get those engin
 npx create-turbo@latest
 ```
 
-## 📦 What’s in the Box?
-
-Dive into a world of efficiency with these pre-configured goodies:
-
 ### 🌐 Apps and Packages Galore!
 
 - `app`: a sleek [Next.js](https://nextjs.org/) app for your web app.
@@ -91,10 +87,9 @@ Fuel your knowledge about Turborepo with these resources:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-## 📝 TO-DO:
-
-- Add `bootstrap-config` styling?
 
 ## Contributions:
 
-- [Kenshanta](https://github.com/kenshanta)
+ <a href="https://github.com/kenshanta/miniature-launchpad/graphs/contributors">
+   <img src="https://contrib.rocks/image?repo=kenshanta/miniature-launchpad"/>
+ </a>
